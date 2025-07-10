@@ -37,7 +37,7 @@ const skills = [
         ]
     },
     {
-        "key": "Libraries, Technologies, Instruments",
+        "key": "Technologies",
         "value": [
             {"key": "Android", "hasIcon": true, "iconUrl": "devicon/android", "level": proficientColor},
             {"key": "Android studio", "hasIcon": true, "iconUrl": "devicon/androidstudio", "level": proficientColor},
@@ -125,9 +125,9 @@ const changeActiveElement = (i: number, hasColors: boolean) => {
                             />
                             : <div/>
                     }
-                    className={"h-20 w-20 opacity-85 " + (hasColors ? skill.level : "bg-transparent")}
+                    className={"h-10 w-10 sm:h-20 sm:w-20 opacity-85 " + (hasColors ? skill.level : "bg-transparent")}
                 >
-                    <div className="text-2xl">{skill.key}</div>
+                    <div className="text-medium sm:text-2xl">{skill.key}</div>
                 </Chip>
             )
         )
@@ -141,7 +141,7 @@ export default function SkillsCard({className}) {
 
     const [content, setContent] = useState(changeActiveElement(index, hasColors))
     const changeColorStateAndInvalidate = (enableColors) => {
-        if(enableColors != hasColors) {
+        if (enableColors != hasColors) {
             setHasColors(enableColors)
             setContent(changeActiveElement(index, enableColors))
         }
@@ -178,7 +178,7 @@ export default function SkillsCard({className}) {
                     items={skills}
                     onSelectionChange={changeTab}
                 >{
-                    (group) => <Tab title={group.key}/>
+                    (group) => <Tab title={group.key} className="text-xs sm:text-medium"/>
                 }</Tabs>
                 <Divider/>
             </CardHeader>

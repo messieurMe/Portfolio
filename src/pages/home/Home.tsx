@@ -22,9 +22,9 @@ export function Home() {
             <ScrollShadow
                 hideScrollBar
                 size={100}
-                className="absolute content-container inset-0 z-10 p-8"
+                className="absolute content-container inset-0 z-10"
             >
-                <div className="m-12">
+                <div className="mt-12">
                     <div
                         className="w-min text-7xl font-mono text-left">{strings.secondName}<br/>{strings.firstName}
                     </div>
@@ -32,7 +32,7 @@ export function Home() {
                     <Divider orientation="horizontal" className="mt-12"></Divider>
                 </div>
 
-                <div className="flex flex-wrap justify-between items-stretch gap-8 mt-10 ms-12 me-12">
+                <div className="flex flex-wrap justify-between items-stretch gap-8 mt-10">
                     <h1 className="flex-none w-full">About me:</h1>
                     <MainInfoCard key="mainInfo" className="w-full md:w-5/11"/>
                     <AvatarCard key="avatar" className="w-full md:w-5/11"/>

@@ -28,14 +28,15 @@ export default function MainInfoCard({className}) {
                     <TableBody items={rowsData}>
                         {(item) => (
                             <TableRow key={item.key}>
-                                <TableCell>{item.key}</TableCell>
-                                {<TableCell>{
+                                <TableCell className="text-xs lg:text-xl">{item.key}</TableCell>
+                                {<TableCell className="text-xs lg:text-xl">{
                                     item.isLink
                                         ? <Link
                                             href={item.link}
                                             underline="hover"
                                             isExternal
-                                            showAnchorIcon>{item.value}</Link>
+                                            showAnchorIcon
+                                            className="text-xs lg:text-xl">{item.value}</Link>
                                         : item.value}
                                 </TableCell>}
                             </TableRow>
