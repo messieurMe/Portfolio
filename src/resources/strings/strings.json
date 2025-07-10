@@ -1,0 +1,18 @@
+{
+  "firstName": "Aslan",
+  "secondName": "Kuliyev",
+  "description": "Android-engineer",
+  "about": {
+    "birthday": {
+      "year": 2000,
+      "month": 7,
+      "day": 28
+    }
+  },
+  "education": {
+  },
+  "skills": {
+  },
+  "contact": {
+  }
+}
